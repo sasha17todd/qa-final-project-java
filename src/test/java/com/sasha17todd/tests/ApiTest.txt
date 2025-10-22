@@ -1,0 +1,11 @@
+# Arrange
+baseUrl = "https://jsonplaceholder.typicode.com"
+endpoint = "/todos/1"
+
+# Act
+response = GET(baseUrl + endpoint)
+
+# Assert
+expect response.status == 200
+expect response.json contains key "title"
+expect response.json["title"] is not empty
