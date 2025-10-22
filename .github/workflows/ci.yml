@@ -15,7 +15,8 @@ jobs:
           distribution: temurin
           java-version: '21'
       - name: Run Maven tests
-        run: mvn -q -e test
+        working-directory: .
+        run: mvn -q -e -f pom.xml test
 
   build-and-push:
     needs: test
