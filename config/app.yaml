@@ -1,6 +1,8 @@
-env: "dev"
+# src/test/resources/app.yaml
+env: "development"
 
 service:
+  name: "jsonplaceholder-api"
   baseUrl: "https://jsonplaceholder.typicode.com"
 
 timeouts:
